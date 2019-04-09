@@ -28,6 +28,7 @@ public class PersonControllerTest {
     @ComponentScan(basePackageClasses = { PersonController.class})
     public static class TestConf {}
 
+    @Ignore
     @Test
     public void testRegisterPersonSuccessful() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/person",new Person(1,"teste",20))
